@@ -16,10 +16,14 @@ public class BlockSound : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D coll)
     {
-        if (tag != "UnityChanTag")
+
+        if (coll.gameObject.tag != "UnityChanTag")
         {
+        
             // UnityChan 以外で衝突したら音を鳴らす
             GetComponent<AudioSource>().Play();
+
         }
+
     }
 }
